@@ -153,6 +153,7 @@ const regionTranslations: Record<string, { name: string; region: string }> = {
   'mn': { name: '蒙古', region: 'ITU-3' },
   'sg': { name: '新加坡', region: 'ITU-3' },
   'sn': { name: '塞内加尔', region: 'ITU-1' },
+  'cn': { name: '中国', region: 'ITU-3' },
 };
 
 export function translateService(name: string): string {

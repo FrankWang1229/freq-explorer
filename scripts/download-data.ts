@@ -69,6 +69,41 @@ async function main() {
   }
 
   console.log(`\nDone! Data saved to ${OUT_DIR}`);
+
+  // Copy custom data (not in upstream API) and merge index
+  const customDir = path.join(import.meta.dirname, '..', 'public', 'custom');
+  if (fs.existsSync(customDir)) {
+    copyDirSync(customDir, OUT_DIR);
+    // Merge custom region entries into the index
+    const customTablesDir = path.join(customDir, 'allocations', 'tables');
+    if (fs.existsSync(customTablesDir)) {
+      const indexData = JSON.parse(
+        fs.readFileSync(path.join(allocDir, 'index.json'), 'utf-8')
+      );
+      for (const file of fs.readdirSync(customTablesDir)) {
+        if (file === 'index.json' || !file.endsWith('.json')) continue;
+        const regionPath = file.replace('.json', '');
+        if (!indexData.entries.some((e: { path: string }) => e.path === regionPath)) {
+          indexData.entries.push({ path: regionPath, region: regionPath.toUpperCase() });
+        }
+      }
+      fs.writeFileSync(path.join(allocDir, 'index.json'), JSON.stringify(indexData));
+    }
+    console.log('Custom data merged.');
+  }
+}
+
+function copyDirSync(src: string, dest: string) {
+  mkdir(dest);
+  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyDirSync(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
 }
 
 main().catch((e) => {
