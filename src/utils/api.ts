@@ -3,7 +3,8 @@
 
 import type { AllocationEntry, Footnote } from '../types';
 
-const LOCAL_BASE = '/data';
+// Use Vite's BASE_URL so the path is correct on GitHub Pages (e.g., /freq-explorer/)
+const LOCAL_BASE = import.meta.env.BASE_URL + 'data';
 const REMOTE_BASE = 'https://www.earthfrequencies.org/api';
 
 async function fetchJSON<T>(localPath: string, remotePath: string): Promise<T> {
