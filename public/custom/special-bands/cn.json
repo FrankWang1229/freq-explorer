@@ -1,0 +1,66 @@
+[
+  {
+    "category": "专用对讲机（需执照）",
+    "bands": [
+      { "freq": "137–167 MHz", "freqUp": 137000000, "freqDown": 167000000, "bw": "30 MHz", "channels": "1752（12.5kHz）", "power": "额定功率", "note": "VHF 频段，部门/行业/单位调度专用", "key": "VHF对讲" },
+      { "freq": "401–423.5 MHz", "freqUp": 401000000, "freqDown": 423500000, "bw": "22.5 MHz", "channels": "1052 对异频信道", "power": "额定功率", "note": "UHF 频段，部门/行业/单位调度专用", "key": "UHF对讲" }
+    ]
+  },
+  {
+    "category": "共用对讲机（需执照）",
+    "bands": [
+      { "freq": "406.21–407.70 MHz", "freqUp": 406210000, "freqDown": 407700000, "bw": "1.49 MHz", "channels": "120（12.5kHz）", "power": "中等功率", "note": "个人/家庭/团体/商业用户共用", "key": "共用对讲" }
+    ]
+  },
+  {
+    "category": "公众对讲机（免执照）",
+    "bands": [
+      { "freq": "409.75–409.9875 MHz", "freqUp": 409750000, "freqDown": 409987500, "bw": "237.5 kHz", "channels": "20（12.5kHz 间隔）", "power": "≤0.5W", "note": "无需执照，短距离通信，CH1–CH20", "key": "公众对讲" }
+    ]
+  },
+  {
+    "category": "公安 PDT 数字集群",
+    "bands": [
+      { "freq": "351–356 MHz（上行）/ 361–366 MHz（下行）", "freqUp": 351000000, "freqDown": 366000000, "bw": "2×5 MHz", "channels": "—", "power": "高功率", "note": "公安专用数字集群通信系统（TETRA 国产化）", "key": "PDT集群" }
+    ]
+  },
+  {
+    "category": "铁路 GSM-R 数字移动通信",
+    "bands": [
+      { "freq": "885–889 MHz（上行）/ 930–934 MHz（下行）", "freqUp": 885000000, "freqDown": 934000000, "bw": "2×4 MHz", "channels": "—", "power": "高功率", "note": "铁路专用 GSM 系统，中国铁路通信基础网", "key": "GSM-R" }
+    ]
+  },
+  {
+    "category": "民航 VHF 地空通信",
+    "bands": [
+      { "freq": "118–137 MHz", "freqUp": 118000000, "freqDown": 137000000, "bw": "19 MHz", "channels": "760（25 kHz 间隔）", "power": "高功率", "note": "航空移动(R)业务，AM 调制，民航通信专用", "key": "民航VHF" }
+    ]
+  },
+  {
+    "category": "水上 VHF 海事通信",
+    "bands": [
+      { "freq": "156–174 MHz", "freqUp": 156000000, "freqDown": 174000000, "bw": "18 MHz", "channels": "CH1–CH28, CH60–CH88", "power": "高功率", "note": "水上移动业务，CH16（156.8 MHz）国际遇险安全呼叫", "key": "海事VHF" }
+    ]
+  },
+  {
+    "category": "NB-IoT 窄带物联网",
+    "bands": [
+      { "freq": "825–840 MHz（上行）/ 870–885 MHz（下行）", "freqUp": 825000000, "freqDown": 885000000, "bw": "15 MHz", "channels": "B5（电信）", "power": "低功率", "note": "中国电信 NB-IoT 主力频段，穿透力强", "key": "NBIoT电信" },
+      { "freq": "890–900 MHz（上行）/ 934–944 MHz（下行）", "freqUp": 890000000, "freqDown": 944000000, "bw": "10 MHz", "channels": "B8（移动）", "power": "低功率", "note": "中国移动 NB-IoT 主力频段", "key": "NBIoT移动" },
+      { "freq": "909–915 MHz（上行）/ 954–960 MHz（下行）", "freqUp": 909000000, "freqDown": 960000000, "bw": "6 MHz", "channels": "B8（联通）", "power": "低功率", "note": "中国联通 NB-IoT 主力频段", "key": "NBIoT联通" }
+    ]
+  },
+  {
+    "category": "ISM 频段（工业/科学/医疗）",
+    "bands": [
+      { "freq": "6.765–6.795 MHz", "freqUp": 6765000, "freqDown": 6795000, "bw": "30 kHz", "channels": "—", "power": "—", "note": "ISM 窄带", "key": "ISM短波" },
+      { "freq": "13.553–13.567 MHz", "freqUp": 13553000, "freqDown": 13567000, "bw": "14 kHz", "channels": "—", "power": "—", "note": "RFID/NFC 常用频段", "key": "ISM13" },
+      { "freq": "26.957–27.283 MHz", "freqUp": 26957000, "freqDown": 27283000, "bw": "326 kHz", "channels": "—", "power": "—", "note": "CB 无线电/模型遥控", "key": "ISM27" },
+      { "freq": "40.66–40.70 MHz", "freqUp": 40660000, "freqDown": 40700000, "bw": "40 kHz", "channels": "—", "power": "—", "note": "工业/科学/医疗", "key": "ISM40" },
+      { "freq": "433.05–434.79 MHz", "freqUp": 433050000, "freqDown": 434790000, "bw": "1.74 MHz", "channels": "—", "power": "≤10mW", "note": "免执照短距离通信、门禁、传感器", "key": "ISM433" },
+      { "freq": "902–928 MHz", "freqUp": 902000000, "freqDown": 928000000, "bw": "26 MHz", "channels": "—", "power": "—", "note": "LoRa/ZigBee/RFID 物联网常用频段", "key": "ISM915" },
+      { "freq": "2400–2483.5 MHz", "freqUp": 2400000000, "freqDown": 2483500000, "bw": "83.5 MHz", "channels": "—", "power": "—", "note": "Wi-Fi 2.4GHz / 蓝牙 / ZigBee", "key": "ISM2.4G" },
+      { "freq": "5725–5875 MHz", "freqUp": 5725000000, "freqDown": 5875000000, "bw": "150 MHz", "channels": "—", "power": "—", "note": "Wi-Fi 5.8GHz", "key": "ISM5.8G" }
+    ]
+  }
+]
