@@ -9,11 +9,14 @@ import SpecialBands from './components/SpecialBands';
 import { useAllocationData } from './hooks/useAllocationData';
 import './App.css';
 
+type TabId = 'itu' | 'business';
+
 function App() {
   const [region, setRegion] = useState('');
   const [freqMin, setFreqMin] = useState<number | null>(null);
   const [freqMax, setFreqMax] = useState<number | null>(null);
   const [serviceFilter, setServiceFilter] = useState('');
+  const [tab, setTab] = useState<TabId>('itu');
 
   const { regions, allocations, footnotes, loading, error } = useAllocationData(region);
 
@@ -35,7 +38,7 @@ function App() {
         <RegionSelector
           regions={regions}
           selected={region}
-          onChange={setRegion}
+          onChange={(r) => { setRegion(r); setTab('itu'); }}
         />
         <FrequencyFilter onFilter={handleFreqFilter} />
       </div>
@@ -63,36 +66,61 @@ function App() {
       )}
 
       {region && !loading && !error && (
-        <div className="main-content">
-          <div className="sidebar">
-            <ServiceFilter
-              allocations={allocations}
-              selected={serviceFilter}
-              onChange={setServiceFilter}
-            />
-          </div>
-          <div className="content">
-            <SpectrumChart
-              allocations={allocations}
-              freqMin={freqMin}
-              freqMax={freqMax}
-              serviceFilter={serviceFilter}
-            />
-            <AllocationTable
-              allocations={allocations}
-              freqMin={freqMin}
-              freqMax={freqMax}
-              serviceFilter={serviceFilter}
-              footnotes={footnotes}
-            />
-            {region === 'cn' && (
-              <>
-                <OperatorBands />
-                <SpecialBands />
-              </>
-            )}
-          </div>
-        </div>
+        <>
+          {/* Tab bar - only show for China */}
+          {region === 'cn' && (
+            <div className="tab-bar">
+              <button
+                className={`tab-btn ${tab === 'itu' ? 'active' : ''}`}
+                onClick={() => setTab('itu')}
+              >
+                ITU 频率划分表
+              </button>
+              <button
+                className={`tab-btn ${tab === 'business' ? 'active' : ''}`}
+                onClick={() => setTab('business')}
+              >
+                具体业务频段
+              </button>
+            </div>
+          )}
+
+          {/* ITU Tab */}
+          {(region !== 'cn' || tab === 'itu') && (
+            <div className="main-content">
+              <div className="sidebar">
+                <ServiceFilter
+                  allocations={allocations}
+                  selected={serviceFilter}
+                  onChange={setServiceFilter}
+                />
+              </div>
+              <div className="content">
+                <SpectrumChart
+                  allocations={allocations}
+                  freqMin={freqMin}
+                  freqMax={freqMax}
+                  serviceFilter={serviceFilter}
+                />
+                <AllocationTable
+                  allocations={allocations}
+                  freqMin={freqMin}
+                  freqMax={freqMax}
+                  serviceFilter={serviceFilter}
+                  footnotes={footnotes}
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Business Tab - China specific bands */}
+          {region === 'cn' && tab === 'business' && (
+            <div className="content business-content">
+              <OperatorBands />
+              <SpecialBands />
+            </div>
+          )}
+        </>
       )}
 
       <footer className="app-footer">
@@ -103,6 +131,7 @@ function App() {
           </a>
           （CC BY-SA 4.0 / MIT）
           · ITU Radio Regulations
+          · 工信部频率规划文件
         </p>
       </footer>
     </div>

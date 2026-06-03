@@ -62,5 +62,48 @@
       { "freq": "2400–2483.5 MHz", "freqUp": 2400000000, "freqDown": 2483500000, "bw": "83.5 MHz", "channels": "—", "power": "—", "note": "Wi-Fi 2.4GHz / 蓝牙 / ZigBee", "key": "ISM2.4G" },
       { "freq": "5725–5875 MHz", "freqUp": 5725000000, "freqDown": 5875000000, "bw": "150 MHz", "channels": "—", "power": "—", "note": "Wi-Fi 5.8GHz", "key": "ISM5.8G" }
     ]
+  },
+  {
+    "category": "卫星通信常规频段",
+    "bands": [
+      { "freq": "1.518–1.559 GHz（下行）/ 1.6265–1.6605 GHz（上行）", "freqUp": 1518000000, "freqDown": 1660500000, "bw": "~75 MHz", "channels": "L 波段", "power": "—", "note": "海事卫星、铱星、Globalstar 等移动卫星通信", "key": "SatL" },
+      { "freq": "2.5–2.69 GHz（下行）/ 2.5–2.69 GHz（上行）", "freqUp": 2500000000, "freqDown": 2690000000, "bw": "190 MHz", "channels": "S 波段", "power": "—", "note": "移动卫星、数字音频广播卫星", "key": "SatS" },
+      { "freq": "3.4–4.2 GHz（下行）/ 5.85–6.425 GHz（上行）", "freqUp": 3400000000, "freqDown": 6425000000, "bw": "~1.4 GHz", "channels": "C 波段", "power": "—", "note": "固定卫星业务主力频段，抗雨衰", "key": "SatC" },
+      { "freq": "7.25–7.75 GHz（下行）/ 7.9–8.4 GHz（上行）", "freqUp": 7250000000, "freqDown": 8400000000, "bw": "~1 GHz", "channels": "X 波段", "power": "—", "note": "政府/军事卫星通信", "key": "SatX" },
+      { "freq": "10.7–12.75 GHz（下行）/ 13.75–14.5 GHz（上行）", "freqUp": 10700000000, "freqDown": 14500000000, "bw": "~3.3 GHz", "channels": "Ku 波段", "power": "—", "note": "卫星电视直播、VSAT、Starlink 用户链路", "key": "SatKu" },
+      { "freq": "17.7–21.2 GHz（下行）/ 27.5–31 GHz（上行）", "freqUp": 17700000000, "freqDown": 31000000000, "bw": "~6.5 GHz", "channels": "Ka 波段", "power": "—", "note": "高通量卫星 (HTS)、Starlink 网关", "key": "SatKa" },
+      { "freq": "37.5–42.5 GHz（下行）/ 47.2–51.4 GHz（上行）", "freqUp": 37500000000, "freqDown": 51400000000, "bw": "~9 GHz", "channels": "Q/V 波段", "power": "—", "note": "星地链路实验、未来高通量通信", "key": "SatQV" },
+      { "freq": "71–76 GHz（下行）/ 81–86 GHz（上行）", "freqUp": 71000000000, "freqDown": 86000000000, "bw": "~10 GHz", "channels": "E 波段", "power": "—", "note": "Starlink Gen2 星间/网关链路", "key": "SatE" }
+    ]
+  },
+  {
+    "category": "Starlink 星链（SpaceX 第二代）",
+    "bands": [
+      { "freq": "12.7–15.63 GHz（上行）/ 17.3–17.8 GHz（下行）", "freqUp": 12700000000, "freqDown": 17800000000, "bw": "~5 GHz", "channels": "Ku 波段", "power": "—", "note": "用户终端链路（User Terminal）", "key": "SLKu" },
+      { "freq": "18.6–21.2 GHz（下行）/ 24.75–31 GHz（上行）", "freqUp": 18600000000, "freqDown": 31000000000, "bw": "~12 GHz", "channels": "Ka 波段", "power": "—", "note": "网关地球站链路（Gateway）", "key": "SLKa" },
+      { "freq": "42.0–42.5 GHz（下行）/ 51.4–52.4 GHz（上行）", "freqUp": 42000000000, "freqDown": 52400000000, "bw": "~10 GHz", "channels": "V 波段", "power": "—", "note": "Gen2 补充容量", "key": "SLV" },
+      { "freq": "71–76 GHz / 81–86 GHz / 92–100 GHz / 102–114.25 GHz", "freqUp": 71000000000, "freqDown": 114250000000, "bw": "~28 GHz", "channels": "E 波段", "power": "—", "note": "Gen2 大容量链路 + 星间链路", "key": "SLE" }
+    ]
+  },
+  {
+    "category": "北斗导航卫星信号（北斗二号/三号）",
+    "bands": [
+      { "freq": "1561.098 MHz（B1I）", "freqUp": 1561098000, "freqDown": 1561098000, "bw": "4.092 MHz", "channels": "B1I", "power": "—", "note": "北斗二号公开+授权信号，BPSK调制", "key": "BDB1I" },
+      { "freq": "1575.42 MHz（B1C）", "freqUp": 1575420000, "freqDown": 1575420000, "bw": "32.736 MHz", "channels": "B1C", "power": "—", "note": "北斗三号新增，与 GPS L1/Galileo E1 同频", "key": "BDB1C" },
+      { "freq": "1176.45 MHz（B2a）", "freqUp": 1176450000, "freqDown": 1176450000, "bw": "20.46 MHz", "channels": "B2a", "power": "—", "note": "北斗三号新增，与 GPS L5/Galileo E5a 同频", "key": "BDB2a" },
+      { "freq": "1207.14 MHz（B2I / B2b）", "freqUp": 1207140000, "freqDown": 1207140000, "bw": "20.46 MHz", "channels": "B2I/B2b", "power": "—", "note": "短报文通信、国际搜救、精密单点定位(P公募PPP)", "key": "BDB2" },
+      { "freq": "1268.52 MHz（B3I）", "freqUp": 1268520000, "freqDown": 1268520000, "bw": "20.46 MHz", "channels": "B3I", "power": "—", "note": "公开+授权信号，BPSK调制", "key": "BDB3" }
+    ]
+  },
+  {
+    "category": "其他 GNSS 导航卫星信号",
+    "bands": [
+      { "freq": "1575.42 MHz（L1）", "freqUp": 1575420000, "freqDown": 1575420000, "bw": "—", "channels": "L1 C/A", "power": "—", "note": "GPS 民用信号（美国）", "key": "GPSL1" },
+      { "freq": "1227.60 MHz（L2）", "freqUp": 1227600000, "freqDown": 1227600000, "bw": "—", "channels": "L2C", "power": "—", "note": "GPS 第二民用信号（美国）", "key": "GPSL2" },
+      { "freq": "1176.45 MHz（L5）", "freqUp": 1176450000, "freqDown": 1176450000, "bw": "—", "channels": "L5", "power": "—", "note": "GPS 现代化安全信号（美国）", "key": "GPSL5" },
+      { "freq": "1602.0 MHz（L1）", "freqUp": 1602000000, "freqDown": 1602000000, "bw": "—", "channels": "L1", "power": "—", "note": "GLONASS 主力信号（俄罗斯）", "key": "GLOL1" },
+      { "freq": "1575.42 MHz（E1）", "freqUp": 1575420000, "freqDown": 1575420000, "bw": "—", "channels": "E1", "power": "—", "note": "Galileo 民用信号（欧盟）", "key": "GALE1" },
+      { "freq": "1176.45 MHz（E5a）", "freqUp": 1176450000, "freqDown": 1176450000, "bw": "—", "channels": "E5a", "power": "—", "note": "Galileo 第二民用信号（欧盟）", "key": "GALE5a" }
+    ]
   }
 ]

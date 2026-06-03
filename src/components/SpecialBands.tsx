@@ -27,6 +27,10 @@ const CATEGORY_COLORS: Record<string, string> = {
   '水上 VHF': '#1ABC9C',
   'NB-IoT': '#2C3E50',
   'ISM': '#7F8C8D',
+  '卫星通信': '#D35400',
+  'Starlink': '#0A84FF',
+  '北斗': '#FF2D55',
+  '其他 GNSS': '#30D158',
 };
 
 function getColor(category: string): string {
