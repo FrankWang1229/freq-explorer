@@ -4,6 +4,7 @@ import FrequencyFilter from './components/FrequencyFilter';
 import ServiceFilter from './components/ServiceFilter';
 import SpectrumChart from './components/SpectrumChart';
 import AllocationTable from './components/AllocationTable';
+import OperatorBands from './components/OperatorBands';
 import { useAllocationData } from './hooks/useAllocationData';
 import './App.css';
 
@@ -83,6 +84,7 @@ function App() {
               serviceFilter={serviceFilter}
               footnotes={footnotes}
             />
+            {region === 'cn' && <OperatorBands />}
           </div>
         </div>
       )}

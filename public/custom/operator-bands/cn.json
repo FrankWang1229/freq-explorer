@@ -1,0 +1,58 @@
+[
+  {
+    "operator": "中国移动",
+    "nameEn": "China Mobile",
+    "color": "#1AAD19",
+    "bands": [
+      { "band": "n41", "tech": "5G NR", "duplex": "TDD", "freq": "2515–2615 MHz", "freqUp": 2515000000, "freqDown": 2615000000, "bw": "100 MHz", "note": "主力 5G 频段" },
+      { "band": "n41", "tech": "4G LTE", "duplex": "TDD", "freq": "2615–2675 MHz", "freqUp": 2615000000, "freqDown": 2675000000, "bw": "60 MHz", "note": "原 TDD 主力，逐步重耕 5G" },
+      { "band": "n79", "tech": "5G NR", "duplex": "TDD", "freq": "4800–4900 MHz", "freqUp": 4800000000, "freqDown": 4900000000, "bw": "100 MHz", "note": "热点容量补充" },
+      { "band": "n28", "tech": "5G NR", "duplex": "FDD", "freq": "703–733 / 758–788 MHz", "freqUp": 703000000, "freqDown": 788000000, "bw": "2×30 MHz", "note": "与广电共建共享，广覆盖" },
+      { "band": "B39", "tech": "4G LTE", "duplex": "TDD", "freq": "1885–1915 MHz", "freqUp": 1885000000, "freqDown": 1915000000, "bw": "30 MHz", "note": "4G 广覆盖，NSA 锚点" },
+      { "band": "B40", "tech": "4G LTE", "duplex": "TDD", "freq": "2320–2370 MHz", "freqUp": 2320000000, "freqDown": 2370000000, "bw": "50 MHz", "note": "室内覆盖（E 频段）" },
+      { "band": "B34", "tech": "4G LTE", "duplex": "TDD", "freq": "2010–2025 MHz", "freqUp": 2010000000, "freqDown": 2025000000, "bw": "15 MHz", "note": "原 3G 重耕，局部补热" },
+      { "band": "B3", "tech": "4G LTE", "duplex": "FDD", "freq": "1710–1735 / 1805–1830 MHz", "freqUp": 1710000000, "freqDown": 1830000000, "bw": "25 MHz", "note": "4G 补充覆盖，NSA 锚点" },
+      { "band": "B8", "tech": "4G LTE", "duplex": "FDD", "freq": "889–904 / 934–949 MHz", "freqUp": 889000000, "freqDown": 949000000, "bw": "15 MHz", "note": "低频打底覆盖" }
+    ]
+  },
+  {
+    "operator": "中国联通",
+    "nameEn": "China Unicom",
+    "color": "#E60012",
+    "bands": [
+      { "band": "n78", "tech": "5G NR", "duplex": "TDD", "freq": "3500–3600 MHz", "freqUp": 3500000000, "freqDown": 3600000000, "bw": "100 MHz", "note": "主力 5G 频段（与电信共享）" },
+      { "band": "n77", "tech": "5G NR", "duplex": "TDD", "freq": "3300–3400 MHz", "freqUp": 3300000000, "freqDown": 3400000000, "bw": "100 MHz", "note": "室内覆盖（三网共享）" },
+      { "band": "n1", "tech": "5G NR", "duplex": "FDD", "freq": "1940–1965 / 2130–2155 MHz", "freqUp": 1940000000, "freqDown": 2155000000, "bw": "25 MHz", "note": "5G 补充覆盖（重耕）" },
+      { "band": "n8", "tech": "5G NR", "duplex": "FDD", "freq": "904–915 / 949–960 MHz", "freqUp": 904000000, "freqDown": 960000000, "bw": "11 MHz", "note": "低频 5G 覆盖" },
+      { "band": "B3", "tech": "4G LTE", "duplex": "FDD", "freq": "1735–1765 / 1830–1860 MHz", "freqUp": 1735000000, "freqDown": 1860000000, "bw": "30 MHz", "note": "4G 主力频段" },
+      { "band": "B1", "tech": "4G LTE", "duplex": "FDD", "freq": "1940–1965 / 2130–2155 MHz", "freqUp": 1940000000, "freqDown": 2155000000, "bw": "25 MHz", "note": "4G 重要频段" },
+      { "band": "B8", "tech": "4G LTE", "duplex": "FDD", "freq": "904–915 / 949–960 MHz", "freqUp": 904000000, "freqDown": 960000000, "bw": "11 MHz", "note": "低频覆盖" },
+      { "band": "B40", "tech": "4G LTE", "duplex": "TDD", "freq": "2300–2320 MHz", "freqUp": 2300000000, "freqDown": 2320000000, "bw": "20 MHz", "note": "室内补充" }
+    ]
+  },
+  {
+    "operator": "中国电信",
+    "nameEn": "China Telecom",
+    "color": "#005EBC",
+    "bands": [
+      { "band": "n78", "tech": "5G NR", "duplex": "TDD", "freq": "3400–3500 MHz", "freqUp": 3400000000, "freqDown": 3500000000, "bw": "100 MHz", "note": "主力 5G 频段（与联通共享）" },
+      { "band": "n77", "tech": "5G NR", "duplex": "TDD", "freq": "3300–3400 MHz", "freqUp": 3300000000, "freqDown": 3400000000, "bw": "100 MHz", "note": "室内覆盖（三网共享）" },
+      { "band": "n1", "tech": "5G NR", "duplex": "FDD", "freq": "1920–1940 / 2110–2130 MHz", "freqUp": 1920000000, "freqDown": 2130000000, "bw": "20 MHz", "note": "5G 补充覆盖（重耕）" },
+      { "band": "n5", "tech": "5G NR", "duplex": "FDD", "freq": "824–835 / 869–880 MHz", "freqUp": 824000000, "freqDown": 880000000, "bw": "11 MHz", "note": "低频 5G 覆盖" },
+      { "band": "B3", "tech": "4G LTE", "duplex": "FDD", "freq": "1765–1785 / 1860–1880 MHz", "freqUp": 1765000000, "freqDown": 1880000000, "bw": "20 MHz", "note": "4G 主力频段" },
+      { "band": "B1", "tech": "4G LTE", "duplex": "FDD", "freq": "1920–1940 / 2110–2130 MHz", "freqUp": 1920000000, "freqDown": 2130000000, "bw": "20 MHz", "note": "4G 重要频段" },
+      { "band": "B5", "tech": "4G LTE", "duplex": "FDD", "freq": "824–835 / 869–880 MHz", "freqUp": 824000000, "freqDown": 880000000, "bw": "11 MHz", "note": "低频广覆盖（原 CDMA 重耕）" },
+      { "band": "B40", "tech": "4G LTE", "duplex": "TDD", "freq": "2370–2390 MHz", "freqUp": 2370000000, "freqDown": 2390000000, "bw": "20 MHz", "note": "室内补充" }
+    ]
+  },
+  {
+    "operator": "中国广电",
+    "nameEn": "China Broadnet",
+    "color": "#8B4513",
+    "bands": [
+      { "band": "n28", "tech": "5G NR", "duplex": "FDD", "freq": "703–733 / 758–788 MHz", "freqUp": 703000000, "freqDown": 788000000, "bw": "2×30 MHz", "note": "黄金低频，覆盖极强（与移动共享）" },
+      { "band": "n79", "tech": "5G NR", "duplex": "TDD", "freq": "4900–4960 MHz", "freqUp": 4900000000, "freqDown": 4960000000, "bw": "60 MHz", "note": "热点容量补充" },
+      { "band": "n77", "tech": "5G NR", "duplex": "TDD", "freq": "3300–3400 MHz", "freqUp": 3300000000, "freqDown": 3400000000, "bw": "100 MHz", "note": "室内共享" }
+    ]
+  }
+]

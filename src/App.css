@@ -474,6 +474,206 @@ body {
   text-decoration: underline;
 }
 
+/* ===== Operator Bands ===== */
+.operator-bands-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: var(--shadow);
+}
+
+.operator-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.op-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.op-filter-btn.active {
+  border-color: var(--primary);
+  background: var(--primary-bg);
+  color: var(--primary);
+}
+
+.op-filter-btn:hover {
+  border-color: var(--primary-light);
+}
+
+.op-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Spectrum bar chart */
+.op-spectrum-bar {
+  position: relative;
+  height: 36px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+
+.op-bar-segment {
+  position: absolute;
+  top: 4px;
+  height: 28px;
+  border-radius: 3px;
+  min-width: 1px;
+  transition: opacity 0.15s;
+}
+
+.op-bar-segment:hover {
+  filter: brightness(0.85);
+}
+
+.op-spectrum-labels {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.op-legend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.legend-swatch {
+  width: 16px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* Operator table */
+.operator-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.operator-table th {
+  text-align: left;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-bottom: 2px solid var(--border);
+  font-weight: 600;
+  color: var(--text-heading);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.operator-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.operator-table tbody tr:hover {
+  background: var(--primary-bg);
+}
+
+.op-name-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.band-cell {
+  font-weight: 700;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  color: var(--text-heading);
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tech-5g {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.tech-4g {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.duplex-cell {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 12px;
+}
+
+.note-cell {
+  color: var(--text-secondary);
+  font-size: 12px;
+  max-width: 200px;
+}
+
+.op-source {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .operator-table th:nth-child(7),
+  .operator-table td:nth-child(7) {
+    display: none;
+  }
+
+  .op-spectrum-bar {
+    height: 24px;
+  }
+
+  .op-bar-segment {
+    top: 3px;
+    height: 18px;
+  }
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .main-content {
