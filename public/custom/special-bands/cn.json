@@ -91,7 +91,7 @@
       { "freq": "1561.098 MHz（B1I）", "freqUp": 1561098000, "freqDown": 1561098000, "bw": "4.092 MHz", "channels": "B1I", "power": "—", "note": "北斗二号公开+授权信号，BPSK调制", "key": "BDB1I" },
       { "freq": "1575.42 MHz（B1C）", "freqUp": 1575420000, "freqDown": 1575420000, "bw": "32.736 MHz", "channels": "B1C", "power": "—", "note": "北斗三号新增，与 GPS L1/Galileo E1 同频", "key": "BDB1C" },
       { "freq": "1176.45 MHz（B2a）", "freqUp": 1176450000, "freqDown": 1176450000, "bw": "20.46 MHz", "channels": "B2a", "power": "—", "note": "北斗三号新增，与 GPS L5/Galileo E5a 同频", "key": "BDB2a" },
-      { "freq": "1207.14 MHz（B2I / B2b）", "freqUp": 1207140000, "freqDown": 1207140000, "bw": "20.46 MHz", "channels": "B2I/B2b", "power": "—", "note": "短报文通信、国际搜救、精密单点定位(P公募PPP)", "key": "BDB2" },
+      { "freq": "1207.14 MHz（B2I / B2b）", "freqUp": 1207140000, "freqDown": 1207140000, "bw": "20.46 MHz", "channels": "B2I/B2b", "power": "—", "note": "短报文通信、国际搜救、精密单点定位(PPP)", "key": "BDB2" },
       { "freq": "1268.52 MHz（B3I）", "freqUp": 1268520000, "freqDown": 1268520000, "bw": "20.46 MHz", "channels": "B3I", "power": "—", "note": "公开+授权信号，BPSK调制", "key": "BDB3" }
     ]
   },
